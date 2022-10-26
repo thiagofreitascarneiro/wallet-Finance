@@ -46,8 +46,34 @@
                 </p>
            </div> 
         </div>
+
+        <div class="products">
+            <div class="products-stock">
+                <picture class="products-stock-image">
+                    <source src="../../public/images/stock-price.png?t=3">
+                    <img src="../../public/images/stock-price.png?t=3" alt="">
+                </picture>
+                <div class="products-stock-text">
+                    <h2>Stock market in real time</h2>
+                    <p>A centralized platform that integrates <br/>
+                        hundreds stock market.</p>
+                </div>
+            </div>
+            <div class="products-portfolio">
+                <div class="products-portfolio-text">
+                    <h2>Stock market in real time</h2>
+                    <p>build an investment portfolio and follow <br/>
+                        it wherever you want.</p>
+                </div>
+                <picture class="products-portfolio-image">
+                    <source src="../../public/images/portfolio.png?t=3">
+                    <img src="../../public/images/portfolio.png?t=3" alt="">
+                </picture>
+            </div>
+        </div>
     </section>
-  
+
+    
 </template>
 
 <script>
@@ -61,7 +87,7 @@ export default {
 @import "../assets/scss/global";
 .container-services {
     width: 100%;
-    height: 368px;
+    height: 1668px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -163,6 +189,70 @@ export default {
                 font-size: 16px;
                 line-height: 24px;
                 color: $colorTextGrey;
+            }
+        }
+    }
+
+    .products {
+        display: flex;
+        flex-direction: column;
+        margin-top: 120px;
+        .products-stock {
+            display: flex;
+            .products-stock-image {
+
+            }
+
+            .products-stock-text {
+                margin-top: 160px;
+                h2 {
+                    font-family: $font;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 32px;
+                    line-height: 40px;
+                    color: $colorTextBlack;
+                }
+
+                p {
+                    font-family: $fontText;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: $fontSizeText;
+                    line-height: 24px;
+                    color: $colorTextGrey;
+                    margin-top: 24px;
+                }
+            }
+        }
+        .products-portfolio {
+            display: flex;
+            .products-portfolio-image {
+                img {
+                    width: 500px;
+                }
+            }
+
+            .products-portfolio-text {
+                margin-top: 160px;
+                h2 {
+                    font-family: $font;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 32px;
+                    line-height: 40px;
+                    color: $colorTextBlack;
+                }
+
+                p {
+                    font-family: $fontText;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: $fontSizeText;
+                    line-height: 24px;
+                    color: $colorTextGrey;
+                    margin-top: 24px;
+                }
             }
         }
     }

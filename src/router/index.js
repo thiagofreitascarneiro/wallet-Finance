@@ -10,8 +10,8 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
-      name: 'home',
+      path: '/home/:page?',
+      name: 'HomeDefault.page',
       component: HomeDefault
     },
     {

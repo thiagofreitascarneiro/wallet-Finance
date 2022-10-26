@@ -11,7 +11,7 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <router-link to="/" class="nav-link">
+          <router-link to="/home" class="nav-link">
             Home
           </router-link>
         </li>
