@@ -54,12 +54,12 @@ a {
 }
 
 @media(max-width:$mobile) {
-    .navbar-light .navbar-nav .nav-link {
-        .navbar-brand {
+    .navbar-brand{
+       
             img {
-                max-width: 200px;
+                width: 200px;
             }
-        }   
+           
     }   
 }
 

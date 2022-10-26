@@ -17,7 +17,9 @@
         </li>
         
         <li class="nav-item">
-          <a class="nav-link" href="#">Services</a>
+          <router-link to="/services" class="nav-link">
+            Services
+          </router-link>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Developers</a>
