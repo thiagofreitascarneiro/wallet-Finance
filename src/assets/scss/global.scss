@@ -9,6 +9,7 @@ a {
     font-weight: bold;
     text-decoration: none; 
     position: relative;
+    color: $white !important;
     a:before {
         content: "";
         position: absolute;
@@ -16,33 +17,56 @@ a {
         height: 3px;
         bottom: 0;
         left: 0;
-        background-color: $white;
+        background-color: $cor2;
         visibility: hidden;
         -webkit-transform: scaleX(0);
         transform: scaleX(0);
         -webkit-transition: all 0.3s ease-in-out 0s;
         transition: all 0.3s ease-in-out 0s;
       }
-    a:hover:before {
-        visibility: visible;
-        -webkit-transform: scaleX(1);
-        transform: scaleX(1);
-      }
+    a:hover {
+        background-color: $cor2 !important;
+    }
 }
 
 .bg-light {
-    background-color: $cor1 !important;
+    background-color: $black !important;
+   
 }
 
 .navbar-light .navbar-nav .nav-link {
     color: $white !important;
     font-family: $font;
-    
+
+    a:hover &:focus, &:active {
+        color: $cor2 !important;
+        text-decoration: underline;
+    }
+    a:hover:before {
+        color: $cor2;
+        
+        
+    }
+
+    .navbar-brand {
+
+    }   
+}
+
+@media(max-width:$mobile) {
+    .navbar-light .navbar-nav .nav-link {
+        .navbar-brand {
+            img {
+                max-width: 200px;
+            }
+        }   
+    }   
 }
 
 .navbar-toggler {
     background-color: $cor2 !important;
 }
+
 
 .button {
     background-color: $cor2;
@@ -52,40 +76,37 @@ a {
     width: 247px;
     height: 60px;
     cursor: pointer;
-    color: $cor1;
+    color: $black;
     font-family: $font;
     font-weight: 700;
     font-size: 20px;
     line-height: 28px;
+
+    &:hover, &:focus, &:active {
+        border: none;
+        outline: none;
+    }
 }
 
 .button-transparent {
     background-color: transparent;
     border-radius: 56px;
     padding: 16px, 56px, 16px, 56px;
-    border: 2px solid $white;
+    border: 2px solid $cor2;
     width: 187px;
     height: 60px;
     cursor: pointer;
-    color: $white;
+    color: $black;
     font-family: $font;
     font-weight: 700;
     font-size: 20px;
     line-height: 28px;
+    &:hover, &:focus, &:active {
+        outline: none;
+    }
     
 
 }
 
-.only-desk{
 
-    @media (max-width:$mobile) {
-        display: none !important;
-    }
-}
 
-.only-mob{
-    display: none !important;
-    @media (max-width:$mobile) {
-        display: block !important;
-    }
-}
