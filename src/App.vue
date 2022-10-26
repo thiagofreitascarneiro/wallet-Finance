@@ -3,7 +3,7 @@
     <NavBar/>
     <main id="main">
       <transition mode="out-in">
-      <router-view></router-view> 
+        <router-view></router-view> 
       </transition>
     </main> 
   </div>

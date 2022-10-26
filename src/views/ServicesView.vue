@@ -68,7 +68,7 @@ export default {
     .services-content-title {
         display: flex;
         text-align: center;
-        margin-top: 250px;
+        margin-top: 180px;
         flex-direction: column;
         h2 {
             font-family: $font;
