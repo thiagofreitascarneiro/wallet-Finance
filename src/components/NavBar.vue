@@ -22,7 +22,9 @@
           </router-link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Developers</a>
+          <router-link to="/developers" class="nav-link">
+            Developers
+          </router-link>
         </li>
         <li class="nav-item">
         <button class="button-transparent">

@@ -7,6 +7,10 @@
         <section name="/home/services">
             <ServicesView/>
         </section>
+
+        <section name="/home/developers">
+            <DevelopersView/>
+        </section>
     </div>
    
 </template>
@@ -14,6 +18,7 @@
 <script>
 import HomeView from './HomeView.vue';
 import ServicesView from './ServicesView.vue';
+import DevelopersView from './DevelopersView.vue';
 
 export default {
     name: 'HomeDefault',
@@ -21,6 +26,7 @@ export default {
     components: { 
         HomeView,
         ServicesView,
+        DevelopersView,
     }
 }
 </script>

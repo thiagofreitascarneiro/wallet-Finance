@@ -262,7 +262,7 @@ export default {
     .container-services {
    
     .services-content-title {
-        
+        margin-top: 70px;
         h2 {
             
         }
@@ -307,6 +307,55 @@ export default {
             }
             p {
                 
+            }
+        }
+    }
+
+    .products {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        text-align: center;
+        .products-stock {
+            display: flex;
+            flex-direction: column;
+            .products-stock-image {
+                order: 2;
+                img {
+                    max-width: 30vh;
+                }
+            }
+
+            .products-stock-text {
+                margin-top: 30px;
+                order: 1;
+                h2 {
+                   
+                }
+
+                p {
+                    
+                }
+            }
+        }
+        .products-portfolio {
+            display: flex;
+            flex-direction: column;
+            .products-portfolio-image {
+                img {
+                    max-width: 30vh;
+                }
+            }
+
+            .products-portfolio-text {
+                margin-top: 30px;
+                h2 {
+                   
+                }
+
+                p {
+                   
+                }
             }
         }
     }
