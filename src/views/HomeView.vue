@@ -3,8 +3,8 @@
     <div class="home-content">
       <div class="content-right">
         <h1>
-          Your data with<br/>
-          real-time analytics
+          Your Porfolio<br/>
+          with real-time analytics
         </h1>
         <p>Harness the potential of Big Data Analytics & Cloud Services <br/>
             and become a data-driven organization with Needle tail</p>

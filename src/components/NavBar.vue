@@ -10,19 +10,20 @@
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item active">
+        <li class="nav-item active" id="home">
           <router-link to="/home" class="nav-link">
             Home
           </router-link>
         </li>
         
-        <li class="nav-item">
-          <router-link to="/services" class="nav-link">
+        <li class="nav-item" >
+          <router-link to="/home/services" 
+          v-smooth-scroll="{ duration: 1000, offset: -50, container: '#services' }" class="nav-link">
             Services
           </router-link>
         </li>
-        <li class="nav-item">
-          <router-link to="/developers" class="nav-link">
+        <li class="nav-item" id="developers">
+          <router-link to="/home/developers" class="nav-link">
             Developers
           </router-link>
         </li>
@@ -40,10 +41,15 @@
   </template>
   
   <script>
+
+
   export default {
-    
-    
+    name: 'NavBar',
+    methods: {
+     
   }
+  
+}
   </script>
   
   <!-- Add "scoped" attribute to limit CSS to this component only -->
