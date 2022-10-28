@@ -16,14 +16,13 @@
           </router-link>
         </li>
         
-        <li class="nav-item" >
-          <router-link to="/home/services" 
-          v-smooth-scroll="{ duration: 1000, offset: -50, container: '#services' }" class="nav-link">
+        <li class="nav-item">
+          <router-link to="/home/services" v-scroll-to="'#services'" class="nav-link">
             Services
           </router-link>
         </li>
-        <li class="nav-item" id="developers">
-          <router-link to="/home/developers" class="nav-link">
+        <li class="nav-item">
+          <router-link to="/home/developers" v-scroll-to="'#developers'" class="nav-link">
             Developers
           </router-link>
         </li>
