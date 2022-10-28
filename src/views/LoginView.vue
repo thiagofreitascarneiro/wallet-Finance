@@ -29,7 +29,7 @@
 
         </div>
       </div>
-      <div class="image-login">
+      <div class="image-login only-desk" >
         <picture>
           <source src="../../public/images/login.png?t=3">
           <img src="../../public/images/login.png?t=3" alt="">
@@ -182,7 +182,7 @@ export default {
             }
         }
       }
-      
+    }   
       .image-login {
         img {
           height: 100vh;
@@ -192,7 +192,7 @@ export default {
   }
 }
 
-}
+
 
 
 </style>

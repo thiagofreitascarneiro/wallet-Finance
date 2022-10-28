@@ -25,12 +25,12 @@ form {
       }
       input[type="email"], textarea {
 
-        background-color : $white !important; 
+        background : $white !important; 
       
       }
       input[type="password"], textarea {
 
-        background-color : blue !important; 
+        background : blue !important; 
       
       }
    
@@ -62,20 +62,14 @@ a {
         left: 50%;
         position: absolute;
         background: $cor2;
-        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        transition: width 0.3s ease 0s, left 0.5s ease 0s;
       }
       &:hover::after {
         width: 100%;
         left: 0;
       }
       &:active {
-        bottom: 0;
-        content: "";
-        display: block;
-        height: 2px;
-        left: 50%;
-        position: absolute;
-        background: $cor2;
+        
       }
     
     
@@ -160,5 +154,16 @@ a {
 
 }
 
+.only-desk{
+	display: block !important;
+	@media (max-width:$mobile) {
+		display: none !important;
+	}
+}
 
-
+.only-mob{
+	display: none !important;
+	@media (max-width:$mobile) {
+		display: block !important;
+	}
+}
