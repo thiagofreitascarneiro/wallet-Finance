@@ -9,12 +9,12 @@
         <div class="content-form">
             <h2>Welcome back</h2> 
             <p>Welcome back! Please enter your details</p>
-            <form>
+            <form id="registration" action="">
               <label for="email">Email</label>
-              <input id="email" name="email" type="email" v-model="login.email">
+              <input id="email" name="email" type="email" v-model="email">
 
               <label for="password">Password</label>
-              <input id="password" name="password" type="password" v-model="login.password">
+              <input id="password" name="password" type="password" v-model="password">
 
               <p class="forgot-password">
                 <a>Forgot password</a>
@@ -22,9 +22,13 @@
 
               <button class="button" @click.prevent="sigin">Sign in</button>
             </form>
-
+            
             <div class="creating-account">
-              <p>Don’t have an account? <a>Sign up for free</a></p>
+              <p>Don’t have an account? 
+                <a href="http://localhost:8080/register">
+                  Sign up for free
+                </a>
+              </p>
             </div>
 
         </div>
@@ -35,6 +39,7 @@
           <img src="../../public/images/login.png?t=3" alt="">
         </picture>
       </div>
+      
        
     </div>
 
@@ -48,14 +53,17 @@ export default {
   components: {
   },
   data() {
-    return {
-      login: {
+      return {
         email: "",
         password: "",
+        verifyRegisteredUser: true,
+      }   
+  },
+  methods: {
+        verifyLoginUser() {
+          this.verifyRegisteredUser = !this.verifyRegisteredUser
+        }
       }
-     
-    }
-  }
 }
 </script>
 
@@ -134,10 +142,16 @@ export default {
                 &:hover::after {
                   width: 100%;
                   left: 0;
+                 
                 }
+              
             }
            
           }
+        }
+
+        .form-register {
+
         }
 
         .creating-account {
@@ -160,6 +174,7 @@ export default {
                 color: $colorTextBlack !important;
                 cursor: pointer;
                 position:relative;
+                text-decoration: underline $cor2 5px !important;
 
                 &::after {
                   background: none repeat scroll 0 0 transparent;
@@ -175,7 +190,10 @@ export default {
                 &:hover::after {
                   width: 100%;
                   left: 0;
+                  text-decoration: none !important; 
+                  transition: none !important;
                 }
+                
                 
               }
              
@@ -192,6 +210,79 @@ export default {
   }
 }
 
+
+
+@media(max-width:$mobile) {
+  .container-Login {
+ 
+  .login-content {
+    display:flex;
+    justify-content: center;
+      .sigin-content {
+        text-align: center;
+        margin-left: 0px;
+          img {
+           
+          }
+        .content-form {
+         
+        h2 {
+         
+        }
+        p {
+          
+          
+        }
+
+        form {
+          
+          .button {
+            width: 300px;
+          }
+          .forgot-password {
+            
+            a {
+             
+              &::after {
+                 
+                }
+                &:hover::after {
+                  
+                }
+            }
+           
+          }
+        }
+
+        .creating-account {
+         
+            p {
+             
+
+              a {
+                
+                &::after {
+               
+                }
+                &:hover::after {
+                  
+                }
+                
+              }
+             
+            }
+        }
+      }
+    }   
+      .image-login {
+        img {
+          
+         
+        }
+      }
+  }
+}
+}
 
 
 

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeDefault from '../views/HomeDefault.vue'
-
+import RegisterUser from '../views/RegisterUser.vue'
 
 Vue.use(VueRouter)
 
@@ -14,11 +14,15 @@ const router = new VueRouter({
       name: 'HomeDefault.page',
       component: HomeDefault
     },
-    
     {
       path: '/login',
       name: 'login',
       component: () => import('../views/LoginView.vue')
+    },
+    {
+      path: '/register',
+      name: 'register',
+      component: RegisterUser
     }
   ],
   scrollBehavior() {

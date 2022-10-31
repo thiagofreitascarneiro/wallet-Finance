@@ -19,20 +19,11 @@ form {
         transition: all 0.3s;
         font-size: 1rem;
         font-family: $fontText;
-        margin-bottom: 15px;
-        
-        
-      }
-      input[type="email"], textarea {
-
+        margin-bottom: 15px; 
         background : $white !important; 
-      
       }
-      input[type="password"], textarea {
-
-        background : blue !important; 
       
-      }
+     
    
       
       input:hover,
@@ -44,6 +35,34 @@ form {
         border-color: $cor2;
         border: 2px solid $cor2
       }
+}
+
+@media(max-width:$mobile) {
+    form {
+        align-items: center;
+        label {
+           
+          }
+          
+          input, textarea {
+           
+            width: 300px;
+            
+            
+          }
+         
+       
+          
+          input:hover,
+          input:focus,
+          textarea:hover,
+          textarea:focus {
+            outline: none;
+            box-shadow: 0 6px 12px rgba(30, 60, 90, 0.2);
+            border-color: $cor2;
+            border: 2px solid $cor2
+          }
+    }
 }
 
 a {
