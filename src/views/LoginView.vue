@@ -25,9 +25,10 @@
             
             <div class="creating-account">
               <p>Don’t have an account? 
-                <a href="http://localhost:8080/register">
+                
+                <router-link to="/register" class="sign-free">
                   Sign up for free
-                </a>
+                </router-link>
               </p>
             </div>
 
@@ -75,6 +76,7 @@ export default {
   height: 900px;
   margin: 0px;
   padding: 0px;
+  
   .login-content {
     display:flex;
     justify-content: space-between;
@@ -197,6 +199,36 @@ export default {
                 
               }
              
+            }
+            .sign-free {
+            
+              font-family: $fontText;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 17px;
+              color: $colorTextBlack !important;
+              cursor: pointer;
+              position:relative;
+              text-decoration: underline $cor2 5px !important;
+
+              &::after {
+                background: none repeat scroll 0 0 transparent;
+                bottom: 0;
+                content: "";
+                display: block;
+                height: 2px;
+                left: 50%;
+                position: absolute;
+                background: $cor2;
+                transition: width 0.3s ease 0s, left 0.3s ease 0s;
+              }
+              &:hover::after {
+                width: 100%;
+                left: 0;
+                text-decoration: none !important; 
+                transition: none !important;
+              }   
             }
         }
       }
