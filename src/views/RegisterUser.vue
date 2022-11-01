@@ -2,7 +2,7 @@
     <section class="container-register">
         <NavBar/>
         <div class="register-content">
-           <div class="content-logo">
+           <div class="content-logo only-desk">
                 <picture>
                     <source src="../../public/images/logo.png?t=3">
                     <img src="../../public/images/logo.png?t=3" alt="">
@@ -54,9 +54,9 @@
 
                             <label for="estado">Estado</label>
                             <input id="estado" name="estado" type="text" v-model="estado">
-                            <div class="button">
-                                <slot></slot>
-                            </div>
+                            <button class="button">
+                                Register
+                            </button>
                         </div>
                        
                        
@@ -183,6 +183,13 @@ export default {
                     display: flex;
                     flex-direction: column;
                     margin-left: 50px;
+
+                    .button {
+                       background-color: $black; 
+                       color: $cor2;
+                       margin-left: 25px;
+                       margin-top: 30px;
+                    }
                    }
                 }
             }
@@ -192,5 +199,97 @@ export default {
     }
 }
 
+@media(max-width:$mobile) {
+    .container-register {
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+    .register-content {
+        width: 320px;
+        height: 1300px;  
+        background: $cor2;
+        box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 16px;
+        display: flex;
+        .content-logo {
+            width: 304px;
+            height: 750px;
+            background: $black;
+            border-radius: 16px 0px 0px 16px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+
+            img {
+                margin-top: 150px;
+                
+            }
+            h2 {
+                font-family: $font;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 30px;
+                line-height: 39px;
+                color: $white;
+                margin-top: 120px;
+            }
+            p {
+                font-family: $fontText;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 34px;  
+                color: $white;
+                margin-top: 15px;
+            }
+            .image-idea {
+                img {
+                    width: 100px;
+                }
+            }
+
+            .button-transparent {
+                margin-top: 80px;
+            }
+        }
+        .content-register {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            align-content: center;
+            margin-left: 10px;
+            
+            h2 {
+               
+                }
+            p {
+                
+            }
+            .form-register {
+                display: flex;
+                flex-direction: column;
+                form {
+                    display: flex;
+                    flex-direction: column;
+                   .form-part-1 {
+                    display: flex;
+                    flex-direction: column;
+                   } 
+
+                   .form-part-2 {
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 0px;
+                   }
+                }
+            }
+           
+        }
+
+    }
+}
+}
 
 </style>
