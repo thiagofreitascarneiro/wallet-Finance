@@ -81,7 +81,7 @@ export default {
     display:flex;
     justify-content: space-between;
       .sigin-content {
-        margin-left: 120px;
+        margin-left: 300px;
           img {
             margin-top: 30px;
           }

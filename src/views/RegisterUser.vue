@@ -36,7 +36,7 @@
                             <input id="senha" name="senha" type="password" v-model="senha">
 
                             <label for="cep">Cep</label>
-                            <input id="cep" name="cep" type="text" v-model="cep" @keyup="preencherCep">
+                            <input id="cep" name="cep" type="text" v-model="cep" @keyup="fillZipCode">
 
                         </div>
                         <div class="form-part-2">
@@ -72,6 +72,8 @@
 
 <script>
 import NavBar from '../components/NavBar.vue';
+// import mapFilds from '../../services/helpers.js'
+import getZipCode from '../../services/services.js'
 
 export default {
     name: 'RegisterUser',
@@ -81,8 +83,30 @@ export default {
         }
     },
 
+    // computed: {
+    //     ...mapFilds({
+    //         fields: ["name", "email", "street", 
+    //         "password", "zipcode", "number", "district", 
+    //         "city", "state" ],
+    //         base: "usuario",
+    //         mutation: ""
+    //     })
+    // },
+
     components: {
         NavBar 
+    },
+
+    methods: {
+        fillZipCode() {
+            const cep = this.cep.replace(/\D/g, "");
+            if(cep.length == 8) {
+                getZipCode(cep).then(response => {
+                    console.log(response)
+                    this.street = response.data.logradouro
+                })
+            }
+        }
     }
 }
 </script>
