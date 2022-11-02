@@ -322,7 +322,7 @@ export default {
             .products-stock-image {
                 order: 2;
                 img {
-                    max-width: 30vh;
+                    max-width: 20vh;
                 }
             }
 
@@ -343,7 +343,7 @@ export default {
             flex-direction: column;
             .products-portfolio-image {
                 img {
-                    max-width: 30vh;
+                    max-width: 20vh;
                 }
             }
 

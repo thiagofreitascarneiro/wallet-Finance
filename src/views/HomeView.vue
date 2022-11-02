@@ -10,7 +10,7 @@
             and become a data-driven organization with Needle tail</p>
         <button class="button">start free trial</button>
       </div>
-      <div class="content-left">
+      <div class="content-left only-desk">
         <picture>
           <source src="../../public/images/home-photo.png?t=3">
           <img src="../../public/images/home-photo.png?t=3" alt="">
@@ -80,7 +80,8 @@ background: $black;
 
 @media(max-width:$mobile), (orientation:portrait) {
   .container-home {
-    
+    height: 396px;
+
   .home-content {
     display: flex;
     flex-direction: column;
@@ -89,7 +90,7 @@ background: $black;
       padding-top: 80px;
       padding-left: 0px;
     h1 {
-      font-size: 40px;
+      font-size: 30px;
     }
 
     p {

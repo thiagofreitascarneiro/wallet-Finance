@@ -54,11 +54,12 @@
 
                             <label for="estado">Estado</label>
                             <input id="estado" name="estado" type="text" v-model="estado">
+
                             <button class="button">
                                 Register
                             </button>
                         </div>
-                       
+                        
                        
                     </form>
                 </div>
@@ -183,12 +184,14 @@ export default {
                     display: flex;
                     flex-direction: column;
                     margin-left: 50px;
+                    
 
                     .button {
-                       background-color: $black; 
-                       color: $cor2;
+                       background-color: $black !important; 
+                       color: $white !important;
                        margin-left: 25px;
-                       margin-top: 30px;
+                        margin-left: -150px;
+                        margin-top: 10px;
                     }
                    }
                 }
@@ -282,6 +285,10 @@ export default {
                     display: flex;
                     flex-direction: column;
                     margin-left: 0px;
+
+                    .button {
+                       margin: 10px auto;
+                    }
                    }
                 }
             }
@@ -293,3 +300,4 @@ export default {
 }
 
 </style>
+
