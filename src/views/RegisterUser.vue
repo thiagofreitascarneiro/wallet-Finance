@@ -11,10 +11,8 @@
                     Welcome!
                 </h2> 
                 <p>Start for free and get attractive ideas from the your portifolio.</p>
-                <button class="button-transparent">
-                    <router-link to="/login">
-                        Log In
-                    </router-link>
+                <button class="button-transparent" @click.prevent="toLoginPage">
+                    Log In
                 </button>
            </div>
            <div class="content-register">
@@ -106,6 +104,9 @@ export default {
                     this.street = response.data.logradouro
                 })
             }
+        },
+        toLoginPage() {
+            this.$router.push("/login")
         }
     }
 }
@@ -165,6 +166,7 @@ export default {
 
             .button-transparent {
                 margin-top: 80px;
+                color: $white;
             }
         }
         .content-register {
