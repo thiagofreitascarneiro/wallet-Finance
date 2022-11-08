@@ -55,6 +55,8 @@ background: $black;
       line-height: 48px;
       color: $cor2;
       margin-bottom: 24px;
+     
+      
     }
 
     p {

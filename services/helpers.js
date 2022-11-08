@@ -13,3 +13,4 @@ export function mapFields(options) {
     }
     return object;
   }
+

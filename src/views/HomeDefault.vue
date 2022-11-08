@@ -12,6 +12,10 @@
             <ServicesView/>
         </section>
 
+        <section name="/home/about" id="about">
+            <AboutClient/>
+        </section>
+
         <section name="/home/developers" id="developers">
             <DevelopersView/>
         </section>
@@ -28,6 +32,7 @@ import HomeView from './HomeView.vue';
 import ServicesView from './ServicesView.vue';
 import DevelopersView from './DevelopersView.vue';
 import FooterView from './FooterView.vue';
+import AboutClient from './AboutClient.vue';
 import NavBar from '../components/NavBar.vue';
 
 export default {
@@ -41,6 +46,7 @@ export default {
     components: { 
         HomeView,
         ServicesView,
+        AboutClient,
         DevelopersView,
         FooterView,
         NavBar,

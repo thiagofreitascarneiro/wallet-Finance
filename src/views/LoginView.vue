@@ -81,7 +81,7 @@ export default {
     display:flex;
     justify-content: space-between;
       .sigin-content {
-        margin-left: 300px;
+        margin-left: 150px;
           img {
             margin-top: 30px;
           }
@@ -96,7 +96,24 @@ export default {
           font-size: 30px;
           line-height: 37px;
           color: $colorTextBlack;
+          max-width: 0;
+          white-space: nowrap;
+          overflow: hidden;
+          animation: flashes normal infinite .8s, write normal 3s steps(55) both;
         }
+
+        @keyframes flashes {
+          100% {
+            border-right-color: transparent;
+          }
+        }
+
+        @keyframes write {
+          100% {
+            max-width: 100%;
+          }
+        }
+
         p {
           margin-top: 5px;
           font-family: $fontText;

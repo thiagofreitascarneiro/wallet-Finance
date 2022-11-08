@@ -104,7 +104,9 @@ export default {
             line-height: 40px;
             margin-bottom: 24px;
             color: $colorTextBlack;
+           
         }
+       
 
         p {
             font-family: $fontText;

@@ -22,6 +22,11 @@
           </router-link>
         </li>
         <li class="nav-item">
+          <router-link to="/home/about" v-scroll-to="'#about'" class="nav-link">
+            About
+          </router-link>
+        </li>
+        <li class="nav-item">
           <router-link to="/home/developers" v-scroll-to="'#developers'" class="nav-link">
             Developers
           </router-link>
@@ -65,6 +70,6 @@
       a:hover {
         text-decoration: none;
       }
-    }
+    }  
 }
   </style>

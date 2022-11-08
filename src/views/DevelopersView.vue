@@ -25,7 +25,7 @@
                         <img src="../../public/images/Profile-back.png?t=5" alt="">  
                     </picture>
                     <p>
-                        Guillaume Cabane <br/>CEO - Back-end engineer
+                        Luiz Cabane <br/>CEO - Back-end engineer
                     </p>
                 </div>
             </div>
@@ -53,7 +53,7 @@ export default {
     justify-content: center;
     background: linear-gradient(175.54deg, #f6ffd8 25.81%, #e3fff8 96.38%); opacity: 0.47;
     transform: skewY(-8deg);
-    margin-top: 50px;
+    margin-top: 100px;
     .developers-content {
         margin-top:150px;
         transform: skewY(8deg);
@@ -64,7 +64,9 @@ export default {
             font-size: 24px;
             line-height: 32px;
             color: $colorTextBlack;  
+           
         }
+       
         .logo-developers {
             img {
                 margin-bottom: 50px;
