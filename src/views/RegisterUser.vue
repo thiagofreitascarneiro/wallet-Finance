@@ -21,37 +21,37 @@
                 <div class="form-register">
                     <form>
                         <div class="form-part-1">
-                            <label for="nome" style="margn-left:50px">Nome</label>
-                            <input id="nome" name="nome" type="text" v-model="nome">
+                            <label for="name" style="margn-left:50px">Name</label>
+                            <input id="name" name="name" type="text" v-model="name">
 
                             <label for="email">Email</label>
                             <input id="email" name="email" type="email" v-model="email">
 
-                            <label for="senha">Senha</label>
-                            <input id="senha" name="senha" type="password" v-model="senha">
+                            <label for="password">Password</label>
+                            <input id="password" name="senha" type="password" v-model="password">
 
-                            <label for="senha">Senha</label>
-                            <input id="senha" name="senha" type="password" v-model="senha">
+                            <label for="password">Confirm Password</label>
+                            <input id="password" name="password" type="password" v-model="password">
 
-                            <label for="cep">Cep</label>
-                            <input id="cep" name="cep" type="text" v-model="cep" @keyup="fillZipCode">
+                            <label for="">Zip Code</label>
+                            <input id="zipcode" name="zipcode" type="text" v-model="zipcode" @keyup="fillZipCode()">
 
                         </div>
                         <div class="form-part-2">
-                            <label for="rua">Rua</label>
-                            <input id="rua" name="rua" type="text" v-model="rua">
+                            <label for="street">Street</label>
+                            <input id="street" name="street" type="text" v-model="street">
 
-                            <label for="numero">Numero</label>
-                            <input id="numero" name="numero" type="text" v-model="numero">
+                            <label for="number">Number</label>
+                            <input id="number" name="number" type="text" v-model="number">
 
-                            <label for="bairro">Bairro</label>
-                            <input id="bairro" name="bairro" type="text" v-model="bairro">
+                            <label for="district">District</label>
+                            <input id="district" name="district" type="text" v-model="district">
 
-                            <label for="cidade">Cidade</label>
-                            <input id="cidade" name="cidade" type="text" v-model="cidade">
+                            <label for="city">City</label>
+                            <input id="city" name="city" type="text" v-model="city">
 
-                            <label for="estado">Estado</label>
-                            <input id="estado" name="estado" type="text" v-model="estado">
+                            <label for="state">State</label>
+                            <input id="state" name="state" type="text" v-model="state">
 
                             <button class="button">
                                 Register
@@ -70,44 +70,49 @@
 
 <script>
 import NavBar from '../components/NavBar.vue';
-// import mapFilds from '../../services/helpers.js'
-import getZipCode from '../../services/services.js'
+import {mapFields} from '../../services/helpers.js'
+import {getZipCode} from '../../services/services.js'
 
 export default {
     name: 'RegisterUser',
     data() {
         return {
-
+           
         }
     },
-
-    // computed: {
-    //     ...mapFilds({
-    //         fields: ["name", "email", "street", 
-    //         "password", "zipcode", "number", "district", 
-    //         "city", "state" ],
-    //         base: "usuario",
-    //         mutation: ""
-    //     })
-    // },
-
+    computed: {
+        ...mapFields({
+            fields: ["name", "email", "street", 
+            "password", "zipcode", "number", "district", 
+            "city", "state" ],
+            base: "user",
+            mutation: "REGISTER_USER"
+        })
+    },
     components: {
         NavBar 
     },
 
     methods: {
-        fillZipCode() {
-            const cep = this.cep.replace(/\D/g, "");
-            if(cep.length == 8) {
-                getZipCode(cep).then(response => {
-                    console.log(response)
-                    this.street = response.data.logradouro
-                })
-            }
+        fillZipCode() {   
+            getZipCode(this.zipcode).then(response => {
+                console.log(response)
+                this.street = response.data.logradouro;
+                this.district = response.data.bairro;
+                this.city = response.data.uf;
+                this.state = response.data.localidade;
+            })
+            console.log('aqui')
+            
         },
         toLoginPage() {
             this.$router.push("/login")
-        }
+        },
+    }, 
+    mounted() {
+        getZipCode('03478040').then(response => {
+            console.log(response.data)
+        })
     }
 }
 </script>
@@ -118,7 +123,7 @@ export default {
 .container-register {
     display: flex;
     justify-content: center;
-    margin-top: 150px;
+    margin-top: 90px;
     .register-content {
         width: 1000px;
         height: 750px;  

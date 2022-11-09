@@ -24,9 +24,16 @@ export default new Vuex.Store({
   mutations: {
     VERIFY_LOGIN(state, payload) {
       state.login = payload;
-    }
+    },
+    REGISTER_USER(state, payload) {
+      state.usuario = Object.assign(state.user, payload);
+    },
   },
   actions: {
+    CHANGE_REGISTER_USER(context, value) {
+      context.commit('REGISTER_USER', value)
+      console.log('actions',this.state.user)
+    }
   },
   modules: {
   }

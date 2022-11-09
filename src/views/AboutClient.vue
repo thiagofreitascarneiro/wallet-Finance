@@ -154,7 +154,7 @@ export default {
                 background: #FFFFFF;
                 box-shadow: 0px 2px 32px $cor2;
                 border-radius: $borderRadius;
-                margin-top: 60px;
+                margin-top: 69px;
                 margin-left: 50px;
 
                 .description-customer {
@@ -201,7 +201,7 @@ export default {
                 background: #FFFFFF;
                 box-shadow: 0px 2px 32px $cor2;
                 border-radius: $borderRadius;
-                margin-top: 20px;
+                margin-top: 32px;
                 margin-left: 50px;
 
                 .description-customer {
