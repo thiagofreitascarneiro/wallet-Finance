@@ -94,7 +94,8 @@ export default {
     },
 
     methods: {
-        fillZipCode() {   
+        fillZipCode() {  
+            // if(this.zipcode ==8) 
             getZipCode(this.zipcode).then(response => {
                 console.log(response)
                 this.street = response.data.logradouro;
@@ -102,18 +103,11 @@ export default {
                 this.city = response.data.uf;
                 this.state = response.data.localidade;
             })
-            console.log('aqui')
-            
         },
         toLoginPage() {
             this.$router.push("/login")
         },
     }, 
-    mounted() {
-        getZipCode('03478040').then(response => {
-            console.log(response.data)
-        })
-    }
 }
 </script>
 

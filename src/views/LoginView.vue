@@ -73,7 +73,7 @@ export default {
 
 .container-Login {
   width: 100%;
-  height: 900px;
+  height: 850px;
   margin: 0px;
   padding: 0px;
   
