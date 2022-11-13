@@ -22,7 +22,7 @@ export default {
 
     .container-home-user {
         display: flex;
-         h1 {
+        h1 {
             margin-left: 20px;
          }
     }
