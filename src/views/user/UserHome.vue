@@ -1,17 +1,17 @@
 <template>
   <div class="container-home-user">
-    <SideBar/>
+    <!-- <SideBar/> -->
     <h1>Home User</h1>
   </div>
 </template>
 
 <script>
-import SideBar from '../../components/SideBar.vue'
+// import SideBar from '../../components/SideBar.vue'
 
 export default {
     name: 'UserHome',
     components: {
-        SideBar
+        // SideBar
   }
     
 }

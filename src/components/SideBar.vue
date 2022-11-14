@@ -16,7 +16,7 @@
 				<span class="material-icons">home</span>
 				<span class="text">Home</span>
 			</router-link>
-			<router-link to="/about" class="button">
+			<router-link to="/userabout" class="button">
 				<span class="material-icons">description</span>
 				<span class="text">About</span>
 			</router-link>
@@ -38,6 +38,8 @@
 				<span class="text">Settings</span>
 			</router-link>
 		</div>
+		
+		
 	</aside>
 </template>
 
@@ -49,6 +51,8 @@ const ToggleMenu = () => {
 	is_expanded.value = !is_expanded.value
 	localStorage.setItem("is_expanded", is_expanded.value)
 }
+
+
 </script>
 
 <style lang="scss" scoped>
