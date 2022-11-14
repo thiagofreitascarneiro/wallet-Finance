@@ -1,13 +1,7 @@
 <template>
-  <div class='container-about'>
-    <h1>UserAbout</h1>
-    <h1>UserAbout</h1>
-    <h1>UserAbout</h1>
-    <h1>UserAbout</h1>
-
-    <h1>UserAbout</h1>
-    <h1>UserAbout</h1>
-    <h1>UserAbout</h1>
+  <div class='container'>
+    <h1>User About</h1>
+    
   </div>
 </template>
 
@@ -20,11 +14,12 @@ export default {
 <style lang="scss" scoped>
 @import "../../assets/scss/global";
 
-    .container-about{
+    .container {
         display: flex;
+        justify-content: center;
         h1 {
-            margin-left: 20px;
-         }
+            
+        }
     }
 
 </style>

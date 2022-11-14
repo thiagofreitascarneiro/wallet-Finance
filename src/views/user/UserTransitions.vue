@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class='container'>
         <h1>Transitions</h1>
     </div>
 </template>
@@ -10,6 +10,15 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+@import "../../assets/scss/global";
+
+    .container {
+        display: flex;
+        justify-content: center;
+        h1 {
+            
+        }
+    }
 
 </style>

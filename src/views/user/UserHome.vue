@@ -1,5 +1,5 @@
 <template>
-  <div class="container-home-user">
+  <div class="container">
     <!-- <SideBar/> -->
     <h1>Home User</h1>
   </div>
@@ -20,10 +20,11 @@ export default {
 <style lang="scss" scoped>
 @import "../../assets/scss/global";
 
-    .container-home-user {
+    .container {
         display: flex;
+        justify-content: center;
         h1 {
-            margin-left: 20px;
+            
          }
     }
 

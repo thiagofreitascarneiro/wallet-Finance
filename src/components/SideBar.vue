@@ -1,46 +1,49 @@
 <template>
-	<aside :class="`${is_expanded ? 'is-expanded' : ''}`">
-		<div class="logo">
-			<img src="../../public/images/Vector-logo.png?t=3" alt="Vue" /> 
-		</div>
+	
+		<aside :class="`${is_expanded ? 'is-expanded' : ''}`">
+			<div class="logo">
+				<img src="../../public/images/Vector-logo.png?t=3" alt="Vue" /> 
+			</div>
 
-		<div class="menu-toggle-wrap">
-			<button class="menu-toggle" @click="ToggleMenu">
-				<span class="material-icons">keyboard_double_arrow_right</span>
-			</button>
-		</div>
+			<div class="menu-toggle-wrap">
+				<button class="menu-toggle" @click="ToggleMenu">
+					<span class="material-icons">keyboard_double_arrow_right</span>
+				</button>
+			</div>
 
-		<h3>Menu</h3>
-		<div class="menu">
-			<router-link to="/user" class="button">
-				<span class="material-icons">home</span>
-				<span class="text">Home</span>
-			</router-link>
-			<router-link to="/userabout" class="button">
-				<span class="material-icons">description</span>
-				<span class="text">About</span>
-			</router-link>
-			<router-link to="/team" class="button">
-				<span class="material-icons">group</span>
-				<span class="text">Team</span>
-			</router-link>
-			<router-link to="/contact" class="button">
-				<span class="material-icons">email</span>
-				<span class="text">Contact</span>
-			</router-link>
-		</div>
+			<h3>Menu</h3>
+			<div class="menu">
+				<router-link to="/user" class="button">
+					<span class="material-icons">home</span>
+					<span class="text">Home</span>
+				</router-link>
+				<router-link to="/user-about" class="button">
+					<span class="material-icons">person</span>
+					<span class="text">About</span>
+				</router-link>
+				<router-link to="/dashboard" class="button">
+					<span class="material-icons">dashboard</span>
+					<span class="text">Dashboard</span>
+				</router-link>
+				<router-link to="/transactions" class="button">
+					<span class="material-icons">tune</span>
+					<span class="text">transactions</span>
+				</router-link>
+			</div>
 
-		<div class="flex"></div>
-		
-		<div class="menu">
-			<router-link to="/settings" class="button">
-				<span class="material-icons">settings</span>
-				<span class="text">Settings</span>
-			</router-link>
-		</div>
-		
-		
-	</aside>
+			<div class="flex"></div>
+			
+			<div class="menu">
+				<router-link to="/settings" class="button">
+					<span class="material-icons">settings</span>
+					<span class="text">Settings</span>
+				</router-link>
+			</div>
+			
+			
+		</aside>
+	
+	
 </template>
 
 <script setup>
@@ -56,6 +59,7 @@ const ToggleMenu = () => {
 </script>
 
 <style lang="scss" scoped>
+
 aside {
 	display: flex;
 	flex-direction: column;
@@ -195,4 +199,6 @@ aside {
 		z-index: 99;
 	}
 }
+
+
 </style>

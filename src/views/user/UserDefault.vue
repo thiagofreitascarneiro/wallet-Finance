@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="sidebar">
      <SideBar/>
      <transition mode='out-in'>
 			<router-view></router-view>
@@ -21,5 +21,9 @@ name: 'UserDefault',
 
 <style lang="scss" scoped>
 @import "../../assets/scss/global";
+
+.sidebar {
+  display: flex;
+}
 
 </style>
