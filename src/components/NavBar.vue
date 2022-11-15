@@ -58,18 +58,18 @@
   
   <!-- Add "scoped" attribute to limit CSS to this component only -->
   <style lang="scss" scoped>
-    @import "../assets/scss/global";
-.button-transparent {
-    width: 120px !important;
-    height: 40px !important;
-    font-size: 17px;
-    color: $white !important;
-    margin-left: 50px;
+  @import "../assets/scss/global";
+  .button-transparent {
+      width: 120px !important;
+      height: 40px !important;
+      font-size: 17px;
+      color: $white !important;
+      margin-left: 50px;
 
-    a {
-      a:hover {
-        text-decoration: none;
-      }
-    }  
-}
+      a {
+        a:hover {
+          text-decoration: none;
+        }
+      }  
+  }
   </style>
