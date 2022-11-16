@@ -35,8 +35,8 @@ const router = new VueRouter({
           component: () => import('../views/user/UserHome.vue')
         },
         {
-          path: '/dashboard',
-          component: () => import('../views/user/UserDashboard.vue')
+          path: '/wallet',
+          component: () => import('../views/user/UserWallet.vue')
         },
         {
           path: '/transactions',

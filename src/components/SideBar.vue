@@ -14,16 +14,16 @@
 			<h3>Menu</h3>
 			<div class="menu">
 				<router-link to="/user" class="button">
-					<span class="material-icons">home</span>
+					<span class="material-icons">dashboard</span>
 					<span class="text">Home</span>
 				</router-link>
 				<router-link to="/user-about" class="button">
 					<span class="material-icons">person</span>
 					<span class="text">About</span>
 				</router-link>
-				<router-link to="/dashboard" class="button">
-					<span class="material-icons">dashboard</span>
-					<span class="text">Dashboard</span>
+				<router-link to="/wallet" class="button">
+					<span class="material-icons">account_balance_wallet</span>
+					<span class="text">Wallet</span>
 				</router-link>
 				<router-link to="/transactions" class="button">
 					<span class="material-icons">tune</span>
@@ -63,7 +63,7 @@ const ToggleMenu = () => {
 aside {
 	display: flex;
 	flex-direction: column;
-	background-color: #000000;
+	background-color: #363A3F;
 	color: #ffffff;
 	width: calc(2rem + 32px);
 	overflow: hidden;
@@ -90,7 +90,7 @@ aside {
 		.menu-toggle {
 			transition: 0.2s ease-in-out;
             border: none;
-            background-color: #000000;
+            background-color: #363A3F;
             cursor: pointer;
             outline: none;
 			.material-icons {
@@ -98,7 +98,7 @@ aside {
 				color: #ffffff;
 				transition: 0.2s ease-out;
                 border: none;
-                background-color: #000000;
+                background-color: #363A3F;
                 outline: none;
 			}
 			
